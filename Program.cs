@@ -4,38 +4,14 @@ using _31_40.Dalegates;
 using _31_40.Interface;
 public class Program
 {
-    public delegate bool isPromote(Employee promotableEmplyoo);
-
-    public class Employee
-    {
-        public int empId { get; set; }
-        public string empName { get; set; }
-        public int empAge { get; set; }
-        public int empExperiance { get; set; } = 0;
-
-
-        public static void EmployeePromotion(List<Employee> list, isPromote promoteOrNot)
+     public static bool PromoteEmp(Employee emp)
         {
-            foreach (Employee e in list)
+            if(emp.empExperiance >= 5)
             {
-                if (promoteOrNot(e))
-                {
-                    Console.WriteLine($"{e.empName} are promoted");
-                }
+                return true;
             }
+            return false;
         }
-    }
-
-    public static bool PromoteEmp(Employee emp)
-    {
-        if (emp.empExperiance >= 5)
-        {
-            return true;
-        }
-        return false;
-    }
-
-
     private static void Main(string[] args)
     {
 
