@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _31_40.Dalegates
 {
+    //Store refrences of the methods which have same return types and parameters
     public delegate bool isPromote(Employee promotableEmplyoo);
     public class Employee
     {
